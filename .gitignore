@@ -2,3 +2,7 @@
 .env
 .venv
 /auxiliar
+/data/*
+*.pyc
+__pycache__
+.streamlit/secrets.toml
