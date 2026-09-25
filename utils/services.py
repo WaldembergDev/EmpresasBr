@@ -16,25 +16,25 @@ class DadosEmpresa():
         self.df = _carregar_dados()
 
 
-    def obter_dataframe(self):
+    def obter_dataframe(self) -> pd.DataFrame:
         return self.df
 
 
-    def total_empresas(self):
+    def total_empresas(self) -> int:
         return len(self.df)
 
 
-    def municipio_mais_frequente(self):
+    def municipio_mais_frequente(self) -> str:
         municipio = self.df['MUNICÍPIO'].mode()[0]
         return municipio
 
 
-    def cnae_mais_frequente(self):
+    def cnae_mais_frequente(self) -> str:
         cnae = self.df['CNAE PRINCIPAL'].mode()[0]
         return cnae
 
 
-    def empresas_por_municipio(self):
+    def empresas_por_municipio(self) -> pd.DataFrame:
         dados_agrupados = (
             self.df.groupby('MUNICÍPIO')
             .size()
@@ -45,7 +45,7 @@ class DadosEmpresa():
         return dados_agrupados
 
 
-    def cnaes_mais_comuns(self):
+    def cnaes_mais_comuns(self) -> pd.Series:
         dados_agrupados = (
             self.df.groupby('CNAE PRINCIPAL')
             .size()
