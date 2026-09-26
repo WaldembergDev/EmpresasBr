@@ -11,6 +11,5 @@ Este projeto tem como objetivo processar os arquivos públicos disponibilizados 
 - Pandas
 - Streamlit
 
-/* Aqui pra baixo é o que estou montando. A parte de cima já existia. Me ajude */
 ## Roteiro de Desenvolvimento (Roadmap)
 - [x] **Etapa 1: Definir Stacks

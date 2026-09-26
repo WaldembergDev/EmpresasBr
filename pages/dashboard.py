@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 from utils.services import DadosEmpresa
 
 dados = DadosEmpresa()
@@ -21,6 +20,7 @@ with col3:
 col_grafico1, col_grafico2 = st.columns(2)
 
 with col_grafico1:
+    st.subheader('Gráfico de Empresas por Munícipio', text_alignment='center')
     st.bar_chart(
         dados.empresas_por_municipio(),
         x='MUNICÍPIO',
@@ -32,6 +32,7 @@ with col_grafico1:
         )
 
 with col_grafico2:
+    st.subheader('Gráfico de CNAES mais Comuns', text_alignment='center')
     st.bar_chart(
         dados.cnaes_mais_comuns(),
         sort=False
