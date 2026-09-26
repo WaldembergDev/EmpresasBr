@@ -28,7 +28,7 @@ class DadosEmpresa():
 
 
     def cnae_mais_frequente(self) -> str:
-        cnae = self.df['CNAE PRINCIPAL'].mode()[0]
+        cnae = str(self.df['CNAE PRINCIPAL'].mode()[0])
         return cnae
 
 
