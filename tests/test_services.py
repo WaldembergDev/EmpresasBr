@@ -1,4 +1,4 @@
-from utils.services import DadosEmpresa
+from utils.services_dados import DadosEmpresa
 import pandas as pd
 
 

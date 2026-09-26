@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.services import DadosEmpresa
+from utils.services_dados import DadosEmpresa
 
 dados = DadosEmpresa()
 
