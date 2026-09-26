@@ -1,7 +1,6 @@
 import streamlit as st
 from pathlib import Path
-
-BASE_DIR = Path(__file__).parent
+from config.settings import BASE_DIR
 
 # Especificação da página
 st.set_page_config(page_title="Data manager", page_icon=":material/edit:", layout='wide')

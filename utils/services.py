@@ -1,13 +1,11 @@
-import streamlit as st
 import pandas as pd
-from pathlib import Path
+from config.settings import BASE_DADOS, BASE_DIR
+import streamlit as st
 
-# local do arquivo
-BASE_DIR = Path(__file__).parent.parent
 
 @st.cache_data(ttl=3600)
 def _carregar_dados() -> pd.DataFrame:
-    df = pd.read_parquet(BASE_DIR / 'data' / 'Empresas_ativas_rj.parquet')
+    df = pd.read_parquet(BASE_DIR / BASE_DADOS)
     return df
 
 
@@ -30,7 +28,7 @@ class DadosEmpresa():
 
 
     def cnae_mais_frequente(self) -> str:
-        cnae = self.df['CNAE PRINCIPAL'].mode()[0]
+        cnae = str(self.df['CNAE PRINCIPAL'].mode()[0])
         return cnae
 
 
