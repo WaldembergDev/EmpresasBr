@@ -19,7 +19,7 @@ class DadosEmpresa():
 
 
     def total_empresas(self) -> int:
-        return len(self.df) + 10
+        return len(self.df)
 
 
     def municipio_mais_frequente(self) -> str:
