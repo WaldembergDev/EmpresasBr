@@ -47,7 +47,7 @@ class DadosEmpresa():
         dados_agrupados = (
             self.df.groupby('CNAE PRINCIPAL')
             .size()
-            .sort_values(ascending=True)
+            .sort_values(ascending=False)
             .head(5)
             )
         return dados_agrupados
