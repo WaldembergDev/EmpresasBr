@@ -1,7 +1,17 @@
 /Baixados
 .env
 .venv
-/auxiliar
+# Pasta auxiliar
+/auxiliar/*
+# Permanecer a pasta
+!/auxiliar/Empresa
+!/auxiliar/Estabelecimento
+!/auxiliar/Municipio
+# Não comitar o que tem dentro da pasta
+/auxiliar/Empresa/*
+/auxiliar/Estabelecimento/*
+/auxiliar/Municipio/*
+
 /data/*
 *.pyc
 __pycache__
