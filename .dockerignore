@@ -1,0 +1,8 @@
+.venv
+.env
+# Pasta auxiliar
+/auxiliar/*
+# Permanecer a pasta
+# !/auxiliar/Empresa
+# !/auxiliar/Estabelecimento
+# !/auxiliar/Municipio
